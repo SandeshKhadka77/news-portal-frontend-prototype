@@ -1,4 +1,3 @@
-
 const newsData = [
     {
         id: 1,
