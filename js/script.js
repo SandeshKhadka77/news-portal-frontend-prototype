@@ -1,28 +1,48 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const newsContainer = document.getElementById('news-container');
-    
-    // Function to render news cards
-    function displayNews() {
-        newsContainer.innerHTML = ''; //  container
+// MAIN RENDER FUNCTION 
+function renderNews(filter = 'All') {
+    const container = document.getElementById('news-container');
+    if (!container) return;
 
-        newsData.forEach(item => {
-            const article = document.createElement('article');
-            article.className = 'news-card';
-            article.innerHTML = `
-                <div class="image-wrapper">
-                    <img src="${item.image}" alt="${item.title}" onerror="this.src='https://via.placeholder.com/400x250?text=News+Image'">
-                    <span class="cat-tag">${item.category}</span>
-                </div>
-                <div class="card-content">
-                    <p class="meta">${item.date}</p>
-                    <h2>${item.title}</h2>
-                    <p class="excerpt">${item.excerpt}</p>
-                    <a href="news/article.html?id=${item.id}" class="read-more">Read Full Story &rarr;</a>
-                </div>
-            `;
-            newsContainer.appendChild(article);
-        });
-    }
+    const filtered = filter === 'All' 
+        ? newsData 
+        : newsData.filter(item => item.category === filter);
 
-    displayNews();
+    container.innerHTML = filtered.map(news => `
+        <article class="news-card">
+            <img src="${news.image}" class="card-img" onerror="this.src='https://via.placeholder.com/400x250'">
+            <div class="card-body">
+                <span class="cat-tag">${news.category}</span>
+                <h2>${news.title}</h2>
+                <p>${news.excerpt}</p>
+                <a href="news/article.html?id=${news.id}" class="read-btn">Read More</a>
+            </div>
+        </article>
+    `).join('');
+}
+
+// CATEGORY FILTER LOGIC 
+document.querySelectorAll('.cat-link').forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        
+        document.querySelectorAll('.cat-link').forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+
+        const selectedCat = link.getAttribute('data-category');
+        renderNews(selectedCat);
+
+        // Close mobile menu after clicking a link
+        document.getElementById('navMenu').classList.remove('mobile-active');
+    });
 });
+
+// MOBILE TOGGLE LOGIC 
+const mobileBtn = document.getElementById('mobile-toggle');
+const navMenu = document.getElementById('navMenu');
+
+mobileBtn.addEventListener('click', () => {
+    navMenu.classList.toggle('mobile-active');
+});
+
+// INITIAL LOAD 
+window.onload = () => renderNews('All');

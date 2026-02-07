@@ -3,34 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sacho Khabar | Nepal</title>
+    <title>Sacho Khabar | Satya Suchana</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
     <header class="navbar">
         <div class="nav-container">
             <div class="logo">SACHO<span>KHABAR</span></div>
-            <nav class="nav-links">
-                <a href="index.html" class="active">Home</a>
-                <a href="#">Politics</a>
-                <a href="#">Sports</a>
-            </nav>
+            
+            <nav class="nav-links" id="navMenu">
+                <a href="#" class="cat-link active" data-category="All">Home</a>
+                <a href="#" class="cat-link" data-category="Politics">Politics</a>
+                <a href="#" class="cat-link" data-category="Business">Business</a>
+                <a href="#" class="cat-link" data-category="Sports">Sports</a>
+                <a href="#" class="cat-link" data-category="Economy">Economy</a>
+            </nav>  
+
+            <div class="menu-toggle" id="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </div>               
         </div>
     </header>
 
     <main class="layout">
-        <section class="news-grid" id="news-container"></section>
+        <section class="news-grid" id="news-container">
+            </section>
 
         <aside class="sidebar">
             <div class="widget">
-                <h3>Trending</h3>
-                <ul>
-                    <li>Election 2026 Updates</li>
-                    <li>T20 World Cup Squad</li>
+                <h3>Trending Now</h3>
+                <ul class="trend-list">
+                    <li>Kathmandu Metro Plan 2026</li>
+                    <li>Nepal T20 WC Match Dates</li>
+                    <li>New Tax Policy Highlights</li>
+                    <li>Everest Climate Report</li>
                 </ul>
+            </div>
+
+            <div class="widget">
+                <h3>Newsletter</h3>
+                <p>Stay updated with daily Nepali news.</p>
+                <input type="email" placeholder="Email" class="news-input">
+                <button class="btn-subscribe">SUBSCRIBE</button>
             </div>
         </aside>
     </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-info">
+                <h3>SACHO KHABAR</h3>
+                <p>The most trusted news source in Nepal. Delivering truth with integrity since 2026.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Sections</h4>
+                <ul>
+                    <li>Politics</li>
+                    <li>Economy</li>
+                    <li>Sports</li>
+                </ul>
+            </div>
+
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Sacho Khabar prototype. All rights reserved.
+        </div>
+    </footer>
 
     <script src="js/data.js"></script>
     <script src="js/script.js"></script>
