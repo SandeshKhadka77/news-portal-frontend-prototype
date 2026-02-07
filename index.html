@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SACHO KHABAR</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo">NepalNews</div>
+      <nav class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Politics</a>
+        <a href="#">Sports</a>
+        <a href="#">Business</a>
+        <a href="#">Local</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Latest News from Nepal</h1>
+      <p>Politics, Sports, economy and national updates</p>
+    </div>
+  </section>
+
+  <!-- Main -->
+  <main class="layout">
+
+    <!-- News List -->
+    <section class="news-list">
+
+      <article class="news-item" onclick="openModal(1)">
+        <img src="https://picsum.photos/800/500?random=31" />
+        <div class="news-body">
+          <h2>Nepal election: Youth participation reshapes political landscape</h2>
+          <p class="meta">Politics • Feb 2026</p>
+          <p class="excerpt">
+            Youth voters and student-led movements are playing a critical role in shaping Nepal’s political future as elections approach...
+          </p>
+        </div>
+      </article>
+
+      <article class="news-item" onclick="openModal(2)">
+        <img src="https://picsum.photos/800/500?random=32" />
+        <div class="news-body">
+          <h2>Nepal cricket team announces final squad for T20 World Cup</h2>
+          <p class="meta">Cricket • Feb 2026</p>
+          <p class="excerpt">
+            The Cricket Association of Nepal has revealed a balanced squad combining young talents and experienced players...
+          </p>
+        </div>
+      </article>
+
+      <article class="news-item" onclick="openModal(3)">
+        <img src="https://picsum.photos/800/500?random=33" />
+        <div class="news-body">
+          <h2>Government introduces long-term economic reform strategy</h2>
+          <p class="meta">Business • Jan 2026</p>
+          <p class="excerpt">
+            The government has announced a multi-year economic reform plan focusing on employment generation, tourism revival...
+          </p>
+        </div>
+      </article>
+
+      <article class="news-item" onclick="openModal(4)">
+        <img src="https://picsum.photos/800/500?random=34" />
+        <div class="news-body">
+          <h2>Kathmandu air pollution sparks nationwide health concerns</h2>
+          <p class="meta">Local • Jan 2026</p>
+          <p class="excerpt">
+            Rising pollution levels in Kathmandu Valley have raised serious public health concerns among experts and citizens...
+          </p>
+        </div>
+      </article>
+
+      <article class="news-item" onclick="openModal(5)">
+        <img src="https://picsum.photos/800/500?random=35" />
+        <div class="news-body">
+          <h2>Tourism sector shows signs of recovery after challenging years</h2>
+          <p class="meta">Tourism • Jan 2026</p>
+          <p class="excerpt">
+            Nepal’s tourism industry is gradually recovering with an increase in international arrivals and trekking permits...
+          </p>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="widget">
+        <h3>Trending</h3>
+        <ul>
+          <li>Election debates intensify</li>
+          <li>Nepal T20 World Cup squad</li>
+          <li>Rising air pollution</li>
+          <li>Economic reform plans</li>
+        </ul>
+      </div>
+    </aside>
+
+  </main>
+
+  <!-- Modal -->
+  <div class="modal" id="newsModal">
+    <div class="modal-content">
+      <button class="close-btn" onclick="closeModal()">×</button>
+      <h2 id="modalTitle"></h2>
+      <p id="modalText"></p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    © 2026 SachoKhabar.com • Static Prototype
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html
