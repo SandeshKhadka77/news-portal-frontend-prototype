@@ -1,13 +1,13 @@
 # News Portal – Frontend Prototype
 
-A responsive and modern Nepal-based news portal frontend prototype built using **HTML, CSS, and JavaScript only**.  
+A news portal frontend prototype built using **HTML, CSS, and JavaScript only**.  
 This project is designed as a **static prototype** to demonstrate UI/UX, layout structure, and frontend logic.  
 Future versions will upgrade this into a **fully functional news portal**.
 
 ---
 
 ##  Live Preview
-
+https://sandeshkhadka77.github.io/news-portal-frontend-prototype/
 
 ---
 
